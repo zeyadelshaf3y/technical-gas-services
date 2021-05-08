@@ -1,0 +1,56 @@
+<nav [ngClass]="{'ar': isArabic(), 'en': !isArabic(), 'home': home, 'more-than-200': moreThan200}">
+  <div class="tgs-container">
+    <div class="d-flex justify-content-between">
+      <a href="" class="brand-logo d-flex align-items-center text-decoration-none">
+        <img src="assets/images/logo{{home && !moreThan200 ? '-white': ''}}.png" alt="logo" class="img-fluid">
+      </a>
+      <div class="links flex-grow-1">
+        <div class="top-links">
+          <ul class="d-flex list-unstyled align-items-center justify-content-end p-0 mb-2 flex-wrap">
+            <li class="list-item"><a
+              class="link text-decoration-none text-white text-capitalize">{{'header.jobs' | translate}}</a></li>
+            <li class="list-item"><a
+              class="link text-decoration-none text-white text-capitalize">{{'header.contact' | translate}}</a></li>
+            <li class="list-item"><a
+              class="link text-decoration-none text-white text-capitalize">{{'header.specialized links' | translate}}</a>
+            </li>
+            <li class="list-item"><a class="link text-decoration-none text-white text-capitalize fw-bold"
+                                     (click)="languageService?.direction === 'rtl' ? setEnglish() : setArabic()">{{'header.lang' | translate}}</a>
+            </li>
+            <li class="list-item"><a class="link text-decoration-none text-white text-capitalize line"></a></li>
+            <li class="list-item"><a class="link text-decoration-none text-white text-capitalize"><img
+              [src]="home && !moreThan200 ? 'assets/images/search-home.png': 'assets/images/search.png'" alt="search"></a></li>
+          </ul>
+          <ul class="d-flex list-unstyled align-items-center justify-content-xl-around mb-0 p-0 flex-wrap">
+            <li class="list-item"><a
+              class="link text-decoration-none text-white text-capitalize">{{'header.about' | translate}}</a></li>
+            <li class="list-item"><a
+              class="link text-decoration-none text-white text-capitalize">{{'header.safety' | translate}}</a></li>
+            <li class="list-item"><a
+              class="link text-decoration-none text-white text-capitalize">{{'header.quality' | translate}}</a></li>
+            <li class="list-item"><a
+              class="link text-decoration-none text-white text-capitalize">{{'header.fields' | translate}}</a></li>
+            <li class="list-item"><a
+              class="link text-decoration-none text-white text-capitalize">{{'header.clients' | translate}}</a></li>
+            <li class="list-item"><a
+              class="link text-decoration-none text-white text-capitalize">{{'header.media' | translate}}</a></li>
+            <li class="list-item"><a
+              class="link text-decoration-none text-white text-capitalize">{{'header.hr' | translate}}</a></li>
+            <li class="list-item"><a
+              class="link text-decoration-none text-white text-capitalize">{{'header.blog' | translate}}</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-toggle d-xl-none d-flex align-items-center justify-content-center">
+        <div class=" icon-wrapper">
+          <img src="assets/images/menu.png" alt="menu-toggle" class="img-fluid">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</nav>
+
+

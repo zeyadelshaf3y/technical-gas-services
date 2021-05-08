@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+// GLOBAL STYLE
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+// Variables
+@import "style/variables";
+
+// Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700&display=swap');
+
+// style body when direction is rtl
+body:dir(rtl) {
+  font-family: "Cairo", sans-serif;
+}
+
+body {
+  height: 9000px;
+  overflow-x: hidden;
+}
+
+// style body when direction is ltr
+body:dir(ltr) {
+}
+
+// to make the text align depend on document direction
+* {
+  text-align: start;
+}
+
+.color-blue {
+  color: $color-blue !important;
+}
+
+.tgs-container {
+  width: 85%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 992px) {
+  .tgs-container {
+    width: 100%;
+  }
+}
