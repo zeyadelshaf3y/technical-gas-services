@@ -11,6 +11,7 @@ export class HeaderComponent implements OnInit {
   // tslint:disable-next-line:no-input-rename
   @Input('home') home: boolean;
   moreThan200 = false;
+  window = window;
 
 
   constructor(private translateService: TranslateService,

@@ -225,6 +225,42 @@
       }
     }
 
+    &.ar {
+
+
+      .thumbnails {
+        .thumbnail {
+          .box {
+            .list {
+              .about-text {
+                //padding-left: 0rem;
+              }
+            }
+          }
+
+        }
+      }
+
+    }
+
+    &.en {
+
+
+      .thumbnails {
+        .thumbnail {
+          .box {
+            .list {
+              .about-text {
+                //padding-right: 0rem;
+              }
+            }
+          }
+
+        }
+      }
+
+    }
+
   }
 
 }
