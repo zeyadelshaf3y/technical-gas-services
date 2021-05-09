@@ -1,0 +1,12 @@
+<!--<div class="page-header" [ngStyle]="{'background-image': 'url(' + background + ')'}">-->
+<!--</div>-->
+
+<div class="page-header" [ngClass]="{'ar': isArabic(), 'en': !isArabic()}">
+  <img [src]="background" alt="header-image">
+  <div class="layer h-100 d-flex align-items-center">
+    <div class="container">
+      <h2 class="title fw-bold"> {{title}} <sup><img src="assets/images/symbol.png" alt="symbol"
+                                                                 class="symbol"></sup></h2>
+    </div>
+  </div>
+</div>

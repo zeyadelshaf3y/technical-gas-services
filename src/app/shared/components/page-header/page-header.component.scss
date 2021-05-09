@@ -1,0 +1,64 @@
+.page-header {
+  //background-position: center center;
+  //background-repeat: no-repeat;
+  //background-size: cover;
+  height: 35vh;
+  overflow: hidden;
+  position: relative;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .layer {
+    background: rgb(0,0,0);
+    background: linear-gradient(266deg, rgba(0,0,0,0.5494398442970938) 0%, rgba(0,0,0,0.5242297602634804) 23%, rgba(0,0,0,0.14887962020745793) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    .title {
+      font-size: 38px;
+      color: white;
+    }
+
+    .symbol {
+      width: 25px;
+      margin: 0 5px 10px 5px;
+    }
+
+  }
+
+  &.ar {
+    border-bottom-left-radius: 150px;
+  }
+
+  &.en {
+    border-bottom-right-radius: 150px;
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  .page-header {
+    height: 20vh;
+    border-radius: 0 !important;
+
+    .layer {
+
+      .title {
+        font-size: 28px;
+      }
+
+      .symbol {
+        width: 25px;
+        margin: 0 5px 10px 5px;
+      }
+
+    }
+
+  }
+}

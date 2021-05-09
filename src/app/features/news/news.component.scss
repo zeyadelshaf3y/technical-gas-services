@@ -1,0 +1,33 @@
+@import "src/style/variables";
+
+.news-wrapper {
+
+  .news-list {
+    margin-bottom: 2rem;
+  }
+
+  .pagination {
+    .page-item {
+      .page-link {
+        color: #3E3E3E;
+        font-weight: bold;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+
+        &.active {
+          background-color: $color-green;
+          color: white;
+        }
+
+        &:hover {
+          &:not(&.active) {
+            color: $color-green;
+            background-color: rgba($color-green, 0.2);
+          }
+        }
+      }
+    }
+  }
+}

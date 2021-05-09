@@ -1,0 +1,18 @@
+.share-btns {
+  padding: 1rem 0;
+
+  .share-btn {
+    all: unset;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: rgba(black, 0.1);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
