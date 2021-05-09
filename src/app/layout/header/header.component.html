@@ -12,7 +12,7 @@
             <li class="list-item"><a
               class="link text-decoration-none text-white text-capitalize">{{'header.contact' | translate}}</a></li>
             <li class="list-item"><a
-              class="link text-decoration-none text-white text-capitalize">{{'header.specialized links' | translate}}</a>
+              class="link text-decoration-none text-white text-capitalize" routerLink="/news">{{'header.specialized links' | translate}}</a>
             </li>
             <li class="list-item"><a class="link text-decoration-none text-white text-capitalize fw-bold"
                                      (click)="languageService?.direction === 'rtl' ? setEnglish() : setArabic()">{{'header.lang' | translate}}</a>
@@ -58,24 +58,24 @@
 
 <div class="offcanvas" [ngClass]="{'offcanvas-end': isArabic(), 'offcanvas-start': !isArabic()}" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class=" d-flex align-items-center">
-    <a routerLink="/" class="brand-logo d-flex align-items-center text-decoration-none">
+    <a routerLink="/" class="brand-logo d-flex align-items-center text-decoration-none" data-bs-dismiss="offcanvas">
       <img src="assets/images/logo.png" alt="logo" class="img-fluid">
     </a>
     <button type="button" class="btn-close text-reset  p-4" [ngClass]="{'me-auto': isArabic(), 'ms-auto': !isArabic()}" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
     <ul class="list-unstyled d-flex p-0 flex-column">
-      <li class="list-item mb-2"><a class="item">من نحن</a></li>
-      <li class="list-item mb-2"><a class="item">السلامة والصحة المهينة</a></li>
-      <li class="list-item mb-2"><a class="item">ادارة الجودة المتكالمة</a></li>
-      <li class="list-item mb-2"><a class="item">مجالات العمل الشركة</a></li>
-      <li class="list-item mb-2"><a class="item">العملاء</a></li>
-      <li class="list-item mb-2"><a class="item">الاعلام</a></li>
-      <li class="list-item mb-2"><a class="item">تنمية الموارد البشرية</a></li>
-      <li class="list-item mb-2"><a class="item">مدونة السلوك الوظيفي</a></li>
-      <li class="list-item mb-2"><a class="item">وظائف</a></li>
-      <li class="list-item mb-2"><a class="item">الاتصال بنا</a></li>
-      <li class="list-item mb-2"><a class="item">روابط مخصصه</a></li>
+      <li class="list-item mb-2"><a class="item">{{'header.about' | translate}}</a></li>
+      <li class="list-item mb-2"><a class="item">{{'header.safety' | translate}}</a></li>
+      <li class="list-item mb-2"><a class="item">{{'header.quality' | translate}}</a></li>
+      <li class="list-item mb-2"><a class="item">{{'header.fields' | translate}}</a></li>
+      <li class="list-item mb-2"><a class="item">{{'header.clients' | translate}}</a></li>
+      <li class="list-item mb-2"><a class="item">{{'header.media' | translate}}</a></li>
+      <li class="list-item mb-2"><a class="item">{{'header.hr' | translate}}</a></li>
+      <li class="list-item mb-2"><a class="item">{{'header.blog' | translate}}</a></li>
+      <li class="list-item mb-2"><a class="item">{{'header.jobs' | translate}}</a></li>
+      <li class="list-item mb-2"><a class="item">{{'header.contact' | translate}}</a></li>
+      <li class="list-item mb-2"><a class="item" routerLink="/news" data-bs-dismiss="offcanvas">{{'header.specialized links' | translate}}</a></li>
       <li class="list-item mb-2 d-flex align-items-center justify-content-around">
         <a class="item fw-bold"
            (click)="languageService?.direction === 'rtl' ? setEnglish() : setArabic()">{{'header.lang' | translate}}</a>

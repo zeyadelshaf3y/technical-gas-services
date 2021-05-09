@@ -6,34 +6,34 @@
       <div class="mb-4">
         <img src="assets/images/play-button.png" alt="play" class="play">
       </div>
-      <div class="w-50 mx-auto">
-        <h2 class="header-title text-center fw-bold mb-4">نقوم بتشغيل وصيانة منشآت الغاز الطبيعي ومشاريع الطاقة وفقا
+      <div class="w-50 mx-auto mb-4" data-aos="fade-up" data-aos-once="true">
+        <h2 class="header-title text-center fw-bold">نقوم بتشغيل وصيانة منشآت الغاز الطبيعي ومشاريع الطاقة وفقا
           لأحدث
           المعايير ولمواصفات الفنية العالمية</h2>
       </div>
-      <div class="read-more">
-        <button class="header-btn">اقرأ المزيد</button>
+      <div class="read-more" data-aos="fade-up">
+        <a class="header-btn" (click)="scrollToElement(target)">اقرأ المزيد</a>
       </div>
     </div>
   </div>
   <!--  End Header -->
 
   <!--  Start About Us -->
-  <div class="about-us">
+  <div class="about-us" #target>
     <div class="tgs-container">
       <div class="section-head">
-        <h2 class="title text-center fw-bold">من نحن <sup><img src="assets/images/symbol.png" alt="symbol"
+        <h2 class="title text-center fw-bold" data-aos="fade">من نحن <sup><img src="assets/images/symbol.png" alt="symbol"
                                                                class="symbol"></sup></h2>
       </div>
       <div class="content">
-        <p class="about-text text-center px-0 px-lg-5 mb-5">تأسست الشركة الفنية لخدمات تشغيل خطوط الغاز في عام 2018
+        <p class="about-text text-center px-0 px-lg-5 mb-5" data-aos="fade">تأسست الشركة الفنية لخدمات تشغيل خطوط الغاز في عام 2018
           كشركة ذات مسؤولية محدودة بموجب
           قانون الشركات الأردني وتعديلاته .حيث تعمل الشركة علي تشغيل وصيانة منشآت الغاز الطبيعي ومشاريع الطاقة وفقا
           لأحدث المعايير والمواصفات الفنية العالمية وتتكون شركة TGS وفريق العمل بها من ائتلاف شركات قطاع البترول المصري
           (شركة فجر الأردنية المصرية،شركة فجر المصرية،الشركة المصرية للغازات الطبيعية جاسكو) وبدأت الشركة في تشغيل
           وصيانة خط الغاز العربي 36" وتسهيلاته في 1 مارس 2019 كما تعمل الشركة علي نقل الخبرات المصرية في مجالات الغاز
           الطبيعي ، النفط والطاقة إلي الكوادر البشرية الأردنية.</p>
-        <div class="read-more text-center">
+        <div class="read-more text-center"  data-aos="fade">
           <button class="header-btn">اقرأ المزيد</button>
         </div>
       </div>
@@ -45,7 +45,7 @@
   <div class="thumbnails">
     <div class="row boxes gx-0">
       <div class="col-lg-6 d-flex align-items-center thumbnail n1">
-        <div class="box">
+        <div class="box" [attr.data-aos]="isArabic() ? 'fade-left' : 'fade-right'">
           <h2 class="thumbnail-title">إدارة الجودة المتكاملة <sup><img src="assets/images/symbol.png" alt="symbol"
                                                                        class="symbol img-fluid"></sup></h2>
           <p class="about-text fw-bold mb-0">سياسة الجودة والسلامة والصحة المهنية وحماية البيئة</p>
@@ -68,7 +68,7 @@
       </div>
 
       <div class="col-lg-6 thumbnail d-flex align-items-center n4">
-        <div class="box">
+        <div class="box" [attr.data-aos]="isArabic() ? 'fade-right' : 'fade-left'">
           <h2 class="thumbnail-title">السلامة والصحة المهنية وحماية البيئة <sup><img src="assets/images/symbol.png"
                                                                                      alt="symbol"
                                                                                      class="symbol img-fluid"></sup>
@@ -104,7 +104,7 @@
       </div>
 
       <div class="col-lg-6 d-flex align-items-center thumbnail n5">
-        <div class="box">
+        <div class="box" [attr.data-aos]="isArabic() ? 'fade-left' : 'fade-right'">
           <h2 class="thumbnail-title">إدارة الجودة المتكاملة <sup><img src="assets/images/symbol.png" alt="symbol"
                                                                        class="symbol img-fluid"></sup></h2>
           <p class="about-text fw-bold mb-0">سياسة الجودة والسلامة والصحة المهنية وحماية البيئة</p>
@@ -127,7 +127,7 @@
       </div>
 
       <div class="col-lg-6 d-flex align-items-center thumbnail n8">
-        <div class="box">
+        <div class="box" [attr.data-aos]="isArabic() ? 'fade-right' : 'fade-left'">
           <h2 class="thumbnail-title">إدارة الجودة المتكاملة <sup><img src="assets/images/symbol.png" alt="symbol"
                                                                        class="symbol img-fluid"></sup></h2>
           <p class="about-text mb-4">تأسست الشركة الفنية لخدمات تشغيل خطوط الغاز في عام 2018 كشركة ذات مسؤولية محدودة
@@ -148,7 +148,7 @@
   <div class="partners">
     <div class="container">
       <div class="section-head">
-        <h2 class="title text-center fw-bold">شركاء العمل <sup><img src="assets/images/symbol.png" alt="symbol"
+        <h2 class="title text-center fw-bold" data-aos="fade-up">شركاء العمل <sup><img src="assets/images/symbol.png" alt="symbol"
                                                                class="symbol"></sup></h2>
 
         <div class="row">

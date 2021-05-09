@@ -7,13 +7,16 @@
 // Google fonts
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700&display=swap');
 
+html {
+  scroll-behavior: unset !important;
+}
+
 // style body when direction is rtl
 body:dir(rtl) {
-  font-family: "Cairo", sans-serif;
+  font-family: "Cairo", sans-serif !important;
 }
 
 body {
-  //height: 9000px;
   overflow-x: hidden;
 }
 
@@ -21,9 +24,10 @@ body {
 body:dir(ltr) {
 }
 
-// to make the text align depend on document direction
+// to make the text align depend on document direction and force google fonts to work on chrome
 * {
   text-align: start;
+  font-family: "Cairo", sans-serif !important;
 }
 
 .color-blue {

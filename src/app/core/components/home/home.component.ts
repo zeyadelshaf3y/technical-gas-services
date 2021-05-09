@@ -17,4 +17,9 @@ export class HomeComponent implements OnInit {
     return this.languageService.direction === 'rtl';
   }
 
+  scrollToElement($element): void {
+    console.log($element);
+    $element.scrollIntoView({behavior: 'smooth', block: 'center', inline: 'nearest'});
+  }
+
 }

@@ -1,8 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import {LanguageService} from './shared/services/language.service';
-import {NavigationEnd, NavigationStart, Router} from '@angular/router';
-import {filter} from 'rxjs/operators';
+import * as AOS from 'aos';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -23,5 +22,9 @@ export class AppComponent implements OnInit {
       document.body.dir = 'rtl';
     }
     localStorage.getItem('dir') === 'ltr' ? this.translate.use('en') : this.translate.use('ar');
+    AOS.init({
+      duration: '700'
+    });
   }
+
 }
