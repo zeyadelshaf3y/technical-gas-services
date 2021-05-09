@@ -2,7 +2,7 @@
   <div class="tgs-container">
     <div class="d-flex justify-content-between">
       <a routerLink="/" class="brand-logo d-flex align-items-center text-decoration-none">
-        <img src="assets/images/logo{{(home && !moreThan200) && window.innerWidth >= 992 ? '-white': ''}}.png" alt="logo" class="img-fluid">
+        <img src="assets/images/logo{{(home && !moreThan200) && window.innerWidth >= 1200 ? '-white': ''}}.png" alt="logo" class="img-fluid">
       </a>
       <div class="links flex-grow-1">
         <div class="top-links">
@@ -56,11 +56,34 @@
 
 
 
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-  <div class=" d-flex align-items-end">
-    <button type="button" class="btn-close text-reset me-auto p-4" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+<div class="offcanvas" [ngClass]="{'offcanvas-end': isArabic(), 'offcanvas-start': !isArabic()}" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class=" d-flex align-items-center">
+    <a routerLink="/" class="brand-logo d-flex align-items-center text-decoration-none">
+      <img src="assets/images/logo.png" alt="logo" class="img-fluid">
+    </a>
+    <button type="button" class="btn-close text-reset  p-4" [ngClass]="{'me-auto': isArabic(), 'ms-auto': !isArabic()}" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-    ...
+    <ul class="list-unstyled d-flex p-0 flex-column">
+      <li class="list-item mb-2"><a class="item">من نحن</a></li>
+      <li class="list-item mb-2"><a class="item">السلامة والصحة المهينة</a></li>
+      <li class="list-item mb-2"><a class="item">ادارة الجودة المتكالمة</a></li>
+      <li class="list-item mb-2"><a class="item">مجالات العمل الشركة</a></li>
+      <li class="list-item mb-2"><a class="item">العملاء</a></li>
+      <li class="list-item mb-2"><a class="item">الاعلام</a></li>
+      <li class="list-item mb-2"><a class="item">تنمية الموارد البشرية</a></li>
+      <li class="list-item mb-2"><a class="item">مدونة السلوك الوظيفي</a></li>
+      <li class="list-item mb-2"><a class="item">وظائف</a></li>
+      <li class="list-item mb-2"><a class="item">الاتصال بنا</a></li>
+      <li class="list-item mb-2"><a class="item">روابط مخصصه</a></li>
+      <li class="list-item mb-2 d-flex align-items-center justify-content-around">
+        <a class="item fw-bold"
+           (click)="languageService?.direction === 'rtl' ? setEnglish() : setArabic()">{{'header.lang' | translate}}</a>
+        <a class="item line"></a>
+        <a class="item"><img
+          src="assets/images/search.png" alt="search"></a>
+      </li>
+
+    </ul>
   </div>
 </div>

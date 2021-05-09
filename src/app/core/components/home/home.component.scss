@@ -186,6 +186,11 @@
 @media only screen and (max-width: 1200px) {
   .home-wrapper {
 
+    .header {
+      border-radius: 0 !important;
+
+    }
+
     .thumbnails {
       .boxes {
         .thumbnail {
@@ -226,8 +231,6 @@
     }
 
     &.ar {
-
-
       .thumbnails {
         .thumbnail {
           .box {

@@ -91,9 +91,40 @@ nav {
   }
 }
 
+.offcanvas {
+  .btn-close {
+    box-shadow: none;
+  }
+
+  .brand-logo {
+    padding: 2rem;
+    img {
+      width: 100px;
+    }
+  }
+
+  .offcanvas-body {
+    padding: 2rem;
+    .list-item {
+      .item {
+        color: #676767;
+        text-decoration: none;
+        font-weight: 600;
+        cursor: pointer;
+        text-transform: capitalize;
+        &.line {
+          border-right: 1px solid #676767;
+          padding: 20px 1px;
+        }
+      }
+    }
+  }
+}
+
 
 @media only screen and (max-width: 1200px) {
   nav {
+    padding: 0.8rem 0 !important;
     background-color: white !important;
     .brand-logo {
       img {
@@ -103,15 +134,12 @@ nav {
     .links {
       display: none;
     }
+
   }
 }
 
 
 @media screen and (max-width: 992px) {
-  nav {
-    padding: 0.8rem 0;
-
-  }
 }
 
 
